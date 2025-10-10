@@ -41,16 +41,52 @@
     .list li b{color:#ffd15a}
     .img-fill{width:100%;height:auto;border-radius:12px;display:block}
     .map-section{background:#111;color:#eee;text-align:center;margin-top:24px;padding:24px 12px;border-top:2px solid #FFD15A}
+.brand {
+  font-family: Oswald, system-ui;
+  letter-spacing: 0.5px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* 👈 cambia de center a flex-start */
+  gap: 20px;
+}
+
+.brand img.timon {
+  width: 200px;
+  height: auto;
+  animation: timonDance 3s ease-in-out infinite alternate;
+}
+.text-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .brand img.timon {
+    width: 120px;
+  }
+}
+
+@keyframes timonDance {
+  0% { transform: rotate(0deg) translateY(0); }
+  50% { transform: rotate(5deg) translateY(3px); }
+  100% { transform: rotate(-5deg) translateY(0); }
+}
   </style>
 </head>
 <body>
   <section class="hero">
     <div>
-      <div class="brand">
-		<img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzAyemRreXo5N20wbXptbTNkYTE1dHB1bTFkZW92NjdmMDh3aDY1NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/vKKp9VqDyCIocMPQtJ/giphy.gif" alt="Timón bailando" class="timon" />
-        <h1>¡Sorpresa! — <span class="tagline">Este viaje lo he organizado <u>YO</u></span></h1>
-		        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzAyemRreXo5N20wbXptbTNkYTE1dHB1bTFkZW92NjdmMDh3aDY1NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/vKKp9VqDyCIocMPQtJ/giphy.gif" alt="Timón bailando" class="timon" />
-      </div>
+<div class="brand">
+  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzAyemRreXo5N20wbXptbTNkYTE1dHB1bTFkZW92NjdmMDh3aDY1NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/vKKp9VqDyCIocMPQtJ/giphy.gif" 
+       alt="Timón bailando" 
+       class="timon" />
+  <div class="text-block">
+    <div class="kicker"> </div>
+    <h1>¡Sorpresa! — <span class="tagline">Este viaje lo he organizado <u>YO</u> </span></h1>
+  </div>
+</div>
       <p class="lead"> <strong>Preparate </strong>, nos vamos a vivir <strong>El Rey León</strong> en Madrid, con hotel en Gran Vía y todo listo: tren, entradas.... un plan que ni Timón y Pumba. <span class="wink">Sí, por fin organizo yo uno… reza lo que sepas...</span></p>
     </div>
   </section>

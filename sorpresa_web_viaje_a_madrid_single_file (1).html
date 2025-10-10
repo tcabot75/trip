@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>¡Sorpresa! — Fin de semana El Rey León</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --yellow:#F6C32C; --amber:#FFC300; --brown:#3A2312; --text:#100B05;
+      --muted:#5b514a; --bg:#0b0b0f; --chip:#1b1a1a;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;color:var(--text);background:linear-gradient(180deg,#111,#000)}
+    .hero{position:relative;min-height:56vh;display:grid;place-items:center;text-align:center;overflow:hidden;
+      background:radial-gradient(1800px 900px at 50% -10%,var(--amber),#E59D17 60%,#D0670E 100%);
+      color:#1a0f06;padding:64px 18px 96px;}
+    .hero::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 120px rgba(0,0,0,.35);pointer-events:none}
+    .brand{font-family:Oswald,system-ui;letter-spacing:.5px;position:relative;display:inline-block}
+    .brand img.timon{position:absolute;right:-120px;top:-30px;width:100px;height:auto;animation:timonDance 3s ease-in-out infinite alternate}
+    @keyframes timonDance{0%{transform:rotate(0deg);}50%{transform:rotate(8deg);}100%{transform:rotate(-8deg);}}
+    .brand .kicker{display:inline-block;background:#1a0f06;color:#FFD15A;padding:6px 10px;border-radius:6px;font-size:.9rem;margin-bottom:8px}
+    h1{font-family:Oswald,system-ui;font-size:clamp(38px,7vw,72px);line-height:1.05;margin:6px 0 10px;text-transform:uppercase}
+    .lead{font-size:clamp(15px,2.6vw,20px);opacity:.9;max-width:820px;margin:0 auto}
+    .shell{max-width:980px;margin:0 auto 28px;padding:0 18px}
+    .card{background:#111;color:#eee;border:1px solid #2a211b;border-radius:14px;padding:18px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+    .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+    @media(max-width:880px){.grid{grid-template-columns:1fr}.brand img.timon{display:none}}
+    .section-title{font-family:Oswald,system-ui;text-transform:uppercase;letter-spacing:.5px;margin:0 0 8px;font-size:22px;color:#FFD15A}
+    .pill{display:inline-flex;align-items:center;gap:6px;background:#1f1b17;border:1px solid #382a1f;color:#f4d38b;border-radius:999px;padding:6px 10px;font-size:13px;margin-right:6px;text-decoration:none}
+    .row{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+    .countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:8px}
+    .tile{background:var(--chip);border:1px solid #2a2a2a;border-radius:12px;padding:12px;text-align:center}
+    .num{font-family:Oswald;font-size:34px;line-height:1}
+    .lbl{font-size:12px;color:#aaa;text-transform:uppercase;letter-spacing:.7px}
+    .list{margin:8px 0 0;padding:0;list-style:none}
+    .list li{padding:8px 0;border-bottom:1px dashed #2a2a2a}
+    .list li b{color:#ffd15a}
+    .img-fill{width:100%;height:auto;border-radius:12px;display:block}
+    .map-section{background:#111;color:#eee;text-align:center;margin-top:24px;padding:24px 12px;border-top:2px solid #FFD15A}
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div>
+      <div class="brand">
+		<img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzAyemRreXo5N20wbXptbTNkYTE1dHB1bTFkZW92NjdmMDh3aDY1NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/vKKp9VqDyCIocMPQtJ/giphy.gif" alt="Timón bailando" class="timon" />
+        <h1>¡Sorpresa! — <span class="tagline">Este viaje lo he organizado <u>YO</u> 😎</span></h1>
+		        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzAyemRreXo5N20wbXptbTNkYTE1dHB1bTFkZW92NjdmMDh3aDY1NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/vKKp9VqDyCIocMPQtJ/giphy.gif" alt="Timón bailando" class="timon" />
+      </div>
+      <p class="lead">Prepara tu mejor rugido: nos vamos a vivir <strong>El Rey León</strong> en Madrid, con hotelazo en Gran Vía y todo atado: tren, entradas y un plan que ni Timón y Pumba. <span class="wink">Sí, por fin organizo yo uno… reza lo que sepas...</span></p>
+    </div>
+  </section>
+  <div class="shell">
+    <div class="grid">
+      <div class="card">
+        <h2 class="section-title">Cuenta atrás para la función</h2>
+        <div class="row">
+          <span class="pill">Fechas: <b>7–9 nov 2025</b></span>
+          <span class="pill">Ciudad: <b>Madrid</b></span>
+          <span class="pill">Zona: <b>Gran Vía</b></span>
+        </div>
+        <div id="countdown" class="countdown" aria-live="polite" style="margin-top:10px">
+          <div class="tile"><div class="num" id="cd-d">0</div><div class="lbl">Días</div></div>
+          <div class="tile"><div class="num" id="cd-h">0</div><div class="lbl">Horas</div></div>
+          <div class="tile"><div class="num" id="cd-m">0</div><div class="lbl">Minutos</div></div>
+          <div class="tile"><div class="num" id="cd-s">0</div><div class="lbl">Segundos</div></div>
+        </div>
+        <h2 class="section-title" style="margin-top:16px">Lo que ya está reservado</h2>
+        <ul class="list">
+          <li><b>Musical:</b> El Rey León — <em>Teatro Lope de Vega</em>. <span class="note">Sábado 8 de noviembre a las <b>21:00</b>.</span></li>
+          <li><b>Alojamiento:</b> Hotel en <em>Gran Vía</em>, habitación <em>deluxe</em> con bañera de hidromasaje. Check-in estimado: <b>14:00</b>.</li>
+          <li><b>Transporte:</b> AVE Sevilla ⇄ Madrid (sin cambios):
+            <ul class="list" style="margin-left:16px">
+              <li><b>Ida (vie 7):</b> 10:36 → 13:19 (Santa Justa → Atocha)</li>
+              <li><b>Vuelta (dom 9):</b> 11:10 → 13:54 (Atocha → Santa Justa)</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <aside class="card">
+        <img src="https://img1.wsimg.com/isteam/ip/9304c793-044a-4cc6-8691-17ad1c8c3bb5/EL-REY-LEON.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1280" alt="El Rey León" class="img-fill" />
+      </aside>
+    </div>
+  </div>
+  <section class="map-section">
+    <h2 class="section-title">Mapa rápido</h2>
+    <p style="margin:0 0 12px;font-size:14px;color:#b8b5b2">Abre los lugares clave con un toque:</p>
+    <div class="row">
+      <a class="pill" target="_blank" rel="noopener" href="https://www.stage.es/teatro-lope-de-vega?utm_term=teatro%20lope%20de%20vega%20madrid&utm_campaign=&utm_source=adwords&utm_medium=ppc&hsa_acc=1713416990&hsa_cam=19934214416&hsa_grp=149224556073&hsa_ad=736504666002&hsa_src=g&hsa_tgt=kwd-5799092706&hsa_kw=teatro%20lope%20de%20vega%20madrid&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gad_source=1&gad_campaignid=19934214416&gbraid=0AAAAApd4f9rVblYXRbTBpYT5yXPjLQPSq&gclid=EAIaIQobChMIjpev0KWZkAMV_YN8Bh1plSYcEAAYASAAEgKfbPD_BwE">Teatro Lope de Vega</a>
+      <a class="pill" target="_blank" rel="noopener" href="https://www.booking.com/hotel/es/vitium-hostal-boutiq.es.html?label=es-es-booking-desktop-onknyt5TBrS8m9RnGd*6fgS652829001115%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp9221779%3Ali%3Adec%3Adm&sid=c4c209261c9a6e8b5b7e03d144500ea6&gclid=Cj0KCQjw3aLHBhDTARIsAIRij5-3kWh_nAJ7XrII0X1woLIDu0FxtL_FTpuQLtPQwI9G-SAy_779cD8aAszcEALw_wcB&aid=2311236">Hotel Vitium Boutique</a>
+    </div>
+  </section>
+  <script>
+    (function(){
+      const TARGET = new Date('2025-11-08T21:00:00+01:00');
+      const elD=document.getElementById('cd-d');
+      const elH=document.getElementById('cd-h');
+      const elM=document.getElementById('cd-m');
+      const elS=document.getElementById('cd-s');
+      function pad(n){return String(n).padStart(2,'0');}
+      function tick(){
+        const now=new Date();
+        let diff=TARGET-now;
+        if(diff<0)diff=0;
+        const totalSec=Math.floor(diff/1000);
+        const d=Math.floor(totalSec/86400);
+        const h=Math.floor((totalSec%86400)/3600);
+        const m=Math.floor((totalSec%3600)/60);
+        const s=Math.floor(totalSec%60);
+        elD.textContent=d;elH.textContent=pad(h);elM.textContent=pad(m);elS.textContent=pad(s);
+      }
+      tick();
+      setInterval(tick,1000);
+    })();
+  </script>
+</body>
+</html>

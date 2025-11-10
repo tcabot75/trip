@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Abrir Spotify</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      text-align: center;
+      background: #121212;
+      color: #fff;
+      margin: 0;
+      padding: 2rem;
+    }
+    a {
+      display: inline-block;
+      background: #1DB954;
+      color: white;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      margin-top: 2rem;
+      font-size: 1.1rem;
+      transition: background 0.3s;
+    }
+    a:hover {
+      background: #17a74a;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎵 Abriendo Spotify...</h1>
+  <p>Si no se abre automáticamente, pulsa el botón:</p>
+  <a id="link" href="https://open.spotify.com/playlist/PLAYLIST_ID">Abrir playlist</a>
+
+  <script>
+    const playlistId = "PLAYLIST_ID"; // <-- Sustituye esto por tu ID real
+    const spotifyUrl = `https://open.spotify.com/playlist/${playlistId}`;
+    const androidIntent = `intent://open.spotify.com/playlist/${playlistId}#Intent;package=com.spotify.music;scheme=https;end`;
+
+    // Intenta abrir directamente la app en Android
+    if (/Android/i.test(navigator.userAgent)) {
+      window.location = androidIntent;
+    } else {
+      // Para iOS o desktop: intenta abrir la URL estándar (abrirá la app si está instalada)
+      window.location = spotifyUrl;
+    }
+
+    // Fallback por si el navegador bloquea la redirección
+    setTimeout(() => {
+      document.getElementById("link").style.display = "inline-block";
+    }, 2000);
+  </script>
+</body>
+</html>
